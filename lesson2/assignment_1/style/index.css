@@ -1,0 +1,38 @@
+
+body{
+    color:#404040;
+    font-family: Georgia,Garamond;
+}
+h1,h2,h3,h4,h5,h6{
+    color: #A4A400;
+    background-color: #F0F0F0 ;
+    font-family: Lucida Sans Unicode, Helvetica, Arial;
+    text-decoration: underline;
+    font-weight: 18pt;
+}
+h1{
+    text-align: center;
+    font-size: 22pt;
+    font-weight: bold;
+   
+}
+nav{
+    text-align: center;
+}
+nav > a {
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-right: 2em;
+    
+}
+
+a:link,a:visited{
+    color: #A4A400;
+   
+    
+}
+a:hover{
+    color: #f0f009;
+   
+    
+}

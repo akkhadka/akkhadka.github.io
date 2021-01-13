@@ -1,13 +1,18 @@
 body{
     color:#404040;
     font-family: Georgia,Garamond;
+    background-image: url("../images/silverware.jpg");
+    background-attachment: fixed;
 }
 h1,h2,h3,h4,h5,h6{
-    color: #A4A400;
-    background-color: #F0F0F0 ;
+    color: #A4A400;  
     font-family: Lucida Sans Unicode, Helvetica, Arial;
     text-decoration: underline;
     font-weight: 18pt;
+    letter-spacing: 0.25em;
+}
+h1 > span,h2 > span{
+    background-color: #F0F0F0 ;
 }
 h1{
     text-align: center;
@@ -22,6 +27,17 @@ img.validator {
     width: 66px;
     height: 23px;
 }
-.main-section{
+.link > p{
     line-height: 0.1em;
+}
+blockquote{
+    background-color: #FFFFA8;
+    font-style: italic;
+}
+
+abbr{
+    text-decoration: underline;
+}
+ul{
+    list-style-image: url('../images/pie_icon.gif');
 }
