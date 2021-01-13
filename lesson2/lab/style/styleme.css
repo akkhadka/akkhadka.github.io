@@ -1,6 +1,7 @@
 body {
     font-family: "Lucida Console", "Courier New", monospace;
-    background-color: aqua;
+    background-color: rgb(89, 85, 71);
+    color:white;
 }
 
 h1, h2, h3 {
@@ -9,7 +10,7 @@ h1, h2, h3 {
 }
 
 strong {
-    color: darkgoldenrod;
+    color: rgb(253, 197, 54);
     font-size: 1.3em;
 }
 
@@ -18,8 +19,11 @@ img.validator {
     height: 23px;
 }
 
-a:link {text-decoration : none; }
+a:link {text-decoration : none; color: deepskyblue; }
 a:hover{ text-decoration: underline;}
 p::first-letter{
     font-size: 1.5em;
+}
+dt{
+    color:rgb(221, 99, 11)
 }
