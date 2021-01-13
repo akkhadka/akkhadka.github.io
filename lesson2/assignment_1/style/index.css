@@ -1,5 +1,5 @@
 
-body{
+/* body{
     color:#404040;
     font-family: Georgia,Garamond;
 }
@@ -15,7 +15,7 @@ h1{
     font-size: 22pt;
     font-weight: bold;
    
-}
+} */
 nav{
     text-align: center;
 }
@@ -32,7 +32,6 @@ a:link,a:visited{
     
 }
 a:hover{
-    color: #f0f009;
-   
+    color: #f0f009;   
     
 }
