@@ -1,0 +1,21 @@
+body{
+border: 5px solid green;
+margin-right: 10%;
+margin-left: 10%;
+}
+header{
+    border: 5px solid red;
+}
+header > h2{
+    border: 5px solid yellow;
+   
+}
+section{
+    border: 5px solid  blue;
+    background-color: #E8FBFB;
+    padding: 5px ;
+    margin-top: 10px;
+}
+section > h2 > span{
+    border: 5px solid  purple;
+} 
