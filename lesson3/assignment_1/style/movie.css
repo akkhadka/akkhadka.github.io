@@ -44,27 +44,32 @@ body{
     display: flex;  
    align-items: center;
 }
-.review{
-    columns: 2;
-    column-gap: 2%;      
-    margin: 0 2% 2% 2%
+.reviews{   
+    flex-wrap: wrap;    
+    display: flex;
+    column-gap: 2%;
+    /* margin: 2%; */
+   margin: 0;
+   padding: 2%;
 }
-.review p{
-    overflow: auto;
-    padding: 5px;
+.reviews div{   
+    width: 49%;
+    box-sizing: border-box;
+    
 }
-.review img{
+.reviews img{
  float: left;
  margin: 5px;
 }
-.review p:nth-child(odd){
+.reviews p:nth-child(odd){
     border: 2px solid grey;
-    margin-top: 20pt;
+    padding: 8pt ;
     background-color: #E8DC9B;
     border-radius: 10px;
 }
-.review + p{
-    margin-top: 0;
+.reviews  p{
+  overflow: auto;
+  
 }
 #overview > dl{
     padding: 10pt 10pt 0 10pt;
