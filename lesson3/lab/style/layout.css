@@ -12,12 +12,15 @@ body {
 }
 header {
   
-    position: relative;
+    padding-right: 5px;
     text-align: right;
     background-color: #A8F0F0;
+  
+    
 }
-h1{
+header>h1{
     margin-bottom: 0;
+    text-shadow: 2px 2px   #66babe;
 }
 
 header>h2 {
