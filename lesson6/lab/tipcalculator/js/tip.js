@@ -9,6 +9,16 @@ window.onload = function () {
         let tip = calcTip(subtotal, tipPercent);
         let total = subtotal + tip;
         totalElem.innerHTML = '$' + total;
+    };
+    subtotalElem.onkeypress= isNumberKey;
+    tipElem.onkeypress= isNumberKey;
+    function isNumberKey(evt)
+    {
+       var charCode = (evt.which) ? evt.which : event.keyCode
+       if (charCode > 31 && (charCode < 48 || charCode > 57))
+          return false;
+
+       return true;
     }
 
 }
