@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>ASCIImation</title>
+    <link href="./style/ascii.css" rel="stylesheet" type="text/css">
+    <script src="./js/animations.js"></script>
+    <script src="./js/ascii.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>
+            CSE 190 M ASCII Animation Viewer
+        </h1>
+        <textarea rows="20" cols="80">
+
+</textarea>
+        <div>
+            <fieldset>
+                <legend>Play Controls:</legend>
+                <button>Start</button>
+                <button>Stop</button>
+            </fieldset>
+            <fieldset>
+                <legend>Animation:</legend>
+                <select>
+                    <option>Blank</option>
+                    <option>Exercise </option>
+                    <option>Juggler </option>
+                    <option>Bike </option>
+                    <option>Dive </option>
+                    <option>Custom </option>
+                </select>
+
+            </fieldset>
+            <fieldset>
+                <legend>Size:</legend>
+                <select>
+                    <option value="Tiny"      > Tiny            </option>
+                    <option value="Small"    > Small           </option>
+                    <option value="Medium"    > Medium          </option>
+                    <option value="Large"      > Large           </option>
+                    <option value="ExtraLarge"> Extra Large     </option>
+                    <option value="XXL"        > XXL             </option>
+                </select>
+
+            </fieldset>
+            <fieldset>
+                <legend>Speed:</legend>
+                <label>
+                    <input type="checkbox">
+                    Turbo
+                </label>
+
+            </fieldset>
+        </div>
+    </div>
+    <div class="validator">
+
+        <a href="https://validator.w3.org/check/referer" referrerpolicy="no-referrer-when-downgrade">
+            <img src="/images/w3c-html.png" alt="Validate HTML" />
+        </a>
+    
+        <a id="htmlValidator" href="https://jigsaw.w3.org/css-validator/check/referer"
+            referrerpolicy="no-referrer-when-downgrade">
+            <img src="/images/w3c-css.png" alt="Validate CsSS" />
+        </a>
+        <a href="https://webster.cs.washington.edu/jslint/?referer">
+            <img src="https://webster.cs.washington.edu/w3c-js.png" alt="Validate JS" />
+            </a>
+    </div>
+</body>
+
+</html>
