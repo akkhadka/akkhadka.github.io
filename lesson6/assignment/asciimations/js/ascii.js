@@ -9,13 +9,13 @@ window.onload = function () {
 
     let currentImage, frames, animationHandle;
     let currentFrame = 0;
-    let speed = 1000;
+    let speed = 250;
     init();
 
     chkTurbo.onchange = function (e) {
         const isTurboSet = e.target.checked;
         if (isTurboSet) speed = 50;
-        else speed = 1000;
+        else speed = 250;
         resetAnimation();
         if (hasAnimationStarted()) {
             startAnimation();
