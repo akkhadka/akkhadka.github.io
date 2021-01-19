@@ -49,7 +49,7 @@ window.onload = function () {
         if (currentImage) {
             canvas.value = currentImage;
         }
-        ddlSize.selectedValue = "12pt";
+        ddlSize.value  = "12pt";
         ddlAnimations.disabled = false;
     }
     function hasAnimationStarted() {
