@@ -27,7 +27,8 @@ div {
     position: fixed;
     bottom:0;
     right:0;
-    width: 88px;
+    width: 100px;
     opacity: 70%;
+    font-size: 12px;
     
 }
