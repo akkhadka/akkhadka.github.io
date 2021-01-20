@@ -32,7 +32,7 @@
     }
     function hasDuplicateAccount(newAccount) {
         for (let acc of accountInfoList) {
-            if (acc.getName() === newAccount.getName() && acc.getName() === newAccount.getName()) return true;
+            if (acc.getName() === newAccount.getName()) return true;
         }
         return false;
     }
