@@ -1,3 +1,5 @@
+(function(){
+    "use strict";
 window.onload = function () {
     const btnGo = document.getElementById('go');
     btnGo.onclick = startAllCountDown;
@@ -41,3 +43,4 @@ window.onload = function () {
         }
     }
 }
+})()

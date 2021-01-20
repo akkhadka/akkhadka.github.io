@@ -1,3 +1,5 @@
+(function(){
+"use strict";
 window.onload = function () {
     const btnDec = document.getElementById('btnDec');
     const txtDec = document.getElementById('txtDec');
@@ -23,3 +25,4 @@ window.onload = function () {
      
     }
 }
+})()

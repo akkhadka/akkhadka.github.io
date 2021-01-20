@@ -1,3 +1,5 @@
+(function(){
+"use strict";
 window.onload = function () {
     let totalElem = document.getElementById('total');
     let subtotalElem = document.getElementById('subtotal');
@@ -27,3 +29,4 @@ function calcTip(subtotal = 0, tip = 0) {
     const tipCalc = tip / 100 * subtotal;
     return tipCalc;
 }
+})()
