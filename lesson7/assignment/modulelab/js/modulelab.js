@@ -10,14 +10,12 @@
         btnCreateAcnt.onclick = () => {
             txtAccounts.value = "";
             if (txtAccountName.value !== "" && txtDeposit.value !== "") {
-                let newAccount = account();
-                newAccount.createAccount(txtAccountName.value, txtDeposit.value);
+                let newAccount = account.createAccount(txtAccountName.value, txtDeposit.value);
                 if (!hasDuplicateAccount(newAccount)) {
                     accountInfoList.push(newAccount);
                 }
-
                 for (let account of accountInfoList) {
-                    txtAccounts.value += `Account Name:${account.getName()}  Balance:${account.getDeposit()}\n`;
+                    txtAccounts.value += `Account Name:${account.name}  Balance:${account.balance}\n`;
 
                 }
             }
@@ -32,29 +30,23 @@
     }
     function hasDuplicateAccount(newAccount) {
         for (let acc of accountInfoList) {
-            if (acc.getName() === newAccount.getName()) return true;
+            if (acc.name === newAccount.name) return true;
         }
         return false;
     }
-    const account = function () {
+    const account = (function () {
         var _name;
         var _deposit;
-        const getName = function () {
-            return _name;
-        }
-        const getDeposit = function () {
-            return _deposit;
-        }
-        function createAccount(name, deposit) {
-            _deposit = deposit;
-            _name = name;
-        }
 
         return {
-            getName: getName,
-            getDeposit: getDeposit,
-            createAccount: createAccount
+            createAccount: function createAccount(name, deposit) {
+                _deposit = deposit;
+                _name = name;
+                return { name: _name, balance: _deposit }
+            }
+
+
         };
-    };
+    })();
 
 })();
