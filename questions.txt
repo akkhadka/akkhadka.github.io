@@ -1,0 +1,125 @@
+possible ways of style
+default broswer
+css-inline, embeded style, css
+
+@font-face
+
+h1 and image with small width and same hieght
+
+
+
+
+Once the display property for an block element is set to have inline value, it's should not contain other block elements inside of it
+
+In which of the following cases an HTML element leaves it's normal flow? Select all that applies
+
+
+Write regex that match all the phone numbers with are code 641 and numbers can be in format
+(641) xxx-xxxx
+
+The hyphen (-) is optional in the formatting.
+
+Write CSS rule that selects input textbox that is currently in focus and gives background color yellow.
+
+
+Which of the following points are true about <label> tag?
+
+
+Which of the following statements are true? Select all that are true.
+
+ A. HTML form is the only way to pass data to the server.	
+ B. <input type="textarea"> is the HTML tag to create a textarea input.	
+ C. Data sent using POST method are secure because message is encrypted by the browser.	
+ D. It is possible to have more than one HTML From in a web page.
+
+
+Which of the following points are true about <label> tag?
+
+ A. It is important for usability/accessibility as elderly people may find hard to select small input fields like checkboxes.	
+ B. It is important for accessibility because screen readers will read the label loud when corresponding field is selected.	
+ C. tag will give the label text a nice looking design.	
+ D. tag can be applied in more than one way
+
+
+
+
+What will be the type of 'val', 'val1' and 'val2' variable in following code?
+let val = (function(){
+
+      var ret = function(){ return {attr: "true"} }
+
+      return ret;
+
+})();
+
+let val1 = val();
+
+let val2 = val1.attr;
+
+
+Q. Based on code given
+How many global variables we have? 2 (module,x)
+Are there any closures in the code? (arg2 free, function(){ return arg2;})
+What will be the outputs of the code?
+How will you call function f1 from outside the module?
+
+let module = (function(){
+
+    x=10;
+
+    let outer1="outer1";
+
+    function f1(arg1, arg2){
+
+        let func1 = function(){ return arg2;};
+
+    }
+
+    return outer1;
+
+})();
+
+alert(module);
+
+alert(x);
+
+function foo(x, y){
+
+    return function(z){
+
+        return x+y+z;
+
+    };
+
+}
+ 
+
+function bar (f){
+
+    return f(10);
+
+}
+ 
+
+var result = bar(foo(5,5));
+alert(result);
+
+
+(function(x,y){
+
+   "use strict";
+
+   console.log(this);
+
+   console.log(x,y);
+
+   const obj = {x:2, foo:function(){console.log(this.x)}};
+
+   obj.foo();
+
+    
+   obj.bar = () =>console.log(this.x);
+
+   obj.bar();
+
+})(5,7);
