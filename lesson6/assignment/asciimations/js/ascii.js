@@ -1,3 +1,4 @@
+(function(){
 "use strict";
 window.onload = function () {
     const ddlAnimations = document.getElementById('ddlAnimations');
@@ -80,3 +81,4 @@ window.onload = function () {
         init();
     }
 }
+})();
