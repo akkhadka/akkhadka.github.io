@@ -14,6 +14,9 @@
                 if (!hasDuplicateAccount(newAccount)) {
                     accountInfoList.push(newAccount);
                 }
+                else{
+                    alert("Cannot insert duplicate");
+                }
                 for (let account of accountInfoList) {
                     txtAccounts.value += `Account Name:${account.name}  Balance:${account.balance}\n`;
 
