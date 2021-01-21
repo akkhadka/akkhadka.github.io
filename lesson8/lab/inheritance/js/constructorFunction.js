@@ -20,7 +20,7 @@
             console.log(`changing gear(${value})....`)
         }
     }
-
+    MountainBike.prototype = new Bicycle();
     
     console.log('------Start constructor function examples------');
     console.log('bicycle>>>>>>');
@@ -31,7 +31,7 @@
     console.log(`Speed: ${cityCycle.speed}`);
 
     console.log('mountainBike>>>>>>');
-    MountainBike.prototype = new Bicycle();
+    
     let electricAssistedCycle = new MountainBike();
     electricAssistedCycle.speedUp(400);
     console.log(`Speed: ${electricAssistedCycle.speed}`);
