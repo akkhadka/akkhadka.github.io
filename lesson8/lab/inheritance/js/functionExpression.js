@@ -18,27 +18,32 @@ const bicycleModule = (function () {
 
     const createMountainBikeProtoype = function (prototype) {
 
-        let mountainBike = Object.create(prototype);
-        mountainBike.gear = 1;
-        mountainBike.setGear = function (value) {
-            mountainBike.gear = value;
-            console.log(`changing gear(${value})....`)
-        }
+        let mountainBike = Object.create(prototype,{
+            gear :{
+                value:1,
+                writable: true
+            },
+            setGear: {
+                value: function(value){
+                    this.gear = value;
+                }
+            }
+            
+        });
+      
         return mountainBike;
 
     }
 
-    const start = function () {
-
-        return {
+    const start =   {
             bicyclePrototype: createBicyclePrototye,
-            mountainBikePrototype: function () { return createMountainBikeProtoype(createBicyclePrototye()) }
+            mountainBikePrototype: function () { return createMountainBikeProtoype(this.bicyclePrototype() )}
 
         }
-    };
-    return start();
+   
+    return start;
 })();
-///to avoid name collision wrapped in iffe
+///to avoid variable name collision wrapped in iffe
 (function () {
     "use strict";
     console.log('------Start function expressions examples------');
