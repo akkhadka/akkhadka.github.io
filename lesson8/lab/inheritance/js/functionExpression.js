@@ -1,5 +1,5 @@
 
-const bicycleModule = (function () {
+(function () {
     "use strict";
     let createBicyclePrototye = function () {
         return {
@@ -17,49 +17,44 @@ const bicycleModule = (function () {
     };
 
     const createMountainBikeProtoype = function (prototype) {
-
-        let mountainBike = Object.create(prototype,{
-            gear :{
-                value:1,
-                writable: true
-            },
-            setGear: {
-                value: function(value){
-                    this.gear = value;
+       
+            let mountainBike = Object.create(prototype, {
+                gear: {
+                    value: 1,
+                    writable: true
+                },
+                setGear: {
+                    value: function (value) {
+                        this.gear = value;
+                    }
                 }
-            }
-            
-        });
+
+            });
+            return mountainBike;        
+
+    }
+    const start = function () {
+        const bicyclePrototype = createBicyclePrototye();
+        const mountainBikePrototype = createMountainBikeProtoype(bicyclePrototype)
+        console.log('------Start function expressions examples------');
+        console.log('bicycle>>>>>>');
       
-        return mountainBike;
+        bicyclePrototype.highSpeed = true;
+        bicyclePrototype.speedUp(100);
+        console.log(`Has high speed: ${bicyclePrototype.highSpeed}, Speed: ${bicyclePrototype.speed}`);
+
+        console.log('mountainBike>>>>>>');
+      
+        mountainBikePrototype.speedUp(200);
+        mountainBikePrototype.setGear(4);
+        console.log(`Speed: ${mountainBikePrototype.speed}`);
+        console.log(`Gear: ${mountainBikePrototype.gear}`);
+        console.log('------End function expressions examples------');
 
     }
 
-    const start =   {
-            bicyclePrototype: createBicyclePrototye,
-            mountainBikePrototype: function () { return createMountainBikeProtoype(this.bicyclePrototype() )}
-
-        }
-   
-    return start;
+    window.addEventListener('load',start);
+    
 })();
-///to avoid variable name collision wrapped in iffe
-(function () {
-    "use strict";
-    console.log('------Start function expressions examples------');
-    console.log('bicycle>>>>>>');
-    let cityCycle = Object.create(bicycleModule.bicyclePrototype());
-    cityCycle.highSpeed = true;
-    cityCycle.speedUp(100);
-    console.log(`Has high speed: ${cityCycle.highSpeed}, Speed: ${cityCycle.speed}`);
 
-    console.log('mountainBike>>>>>>');
-    let electricAssistedCycle = Object.create(bicycleModule.mountainBikePrototype());
-
-    electricAssistedCycle.speedUp(200);
-    electricAssistedCycle.setGear(4);
-    console.log(`Speed: ${electricAssistedCycle.speed}`);
-    console.log(`Gear: ${electricAssistedCycle.gear}`);
-    console.log('------End function expressions examples------');
-})();
 

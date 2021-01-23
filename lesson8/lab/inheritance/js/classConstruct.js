@@ -21,19 +21,28 @@
         }
     }
 
+    class start{
+        
+        constructor(){
+            this.bike = new Bicycle();
+            this.mountainBike = new MountainBike();
+            this.displayResult();
+        }
+        displayResult(){
+            console.log('------Start ES6 class construct examples------');
+            console.log('bicycle>>>>>>');          
+            this.bike.speedUp(50);
+            console.log(`Speed: ${this.bike.speed}`);
+            this.bike.applyBrake(10);        
+            console.log('mountainBike>>>>>>');            
+            this.mountainBike.speedUp(200);
+            this.mountainBike.setGear(4);
+            console.log(`Speed: ${this.mountainBike.speed}`);
+            console.log(`Gear: ${this.mountainBike.gear}`);
+            console.log('------End ES6 class construct examples------');
+        }
+    }
 
-    console.log('------Start ES6 class construct examples------');
-    console.log('bicycle>>>>>>');
-    let cityCycle = new Bicycle();
-    cityCycle.speedUp(50);
-    console.log(`Speed: ${cityCycle.speed}`);
-    cityCycle.applyBrake(10);
-
-    console.log('mountainBike>>>>>>');
-    let electricAssistedCycle = new MountainBike();
-    electricAssistedCycle.speedUp(200);
-    electricAssistedCycle.setGear(4);
-    console.log(`Speed: ${electricAssistedCycle.speed}`);
-    console.log(`Gear: ${electricAssistedCycle.gear}`);
-    console.log('------End function expressions examples------');
+    window.addEventListener('load',()=>new start());
+     
 })();

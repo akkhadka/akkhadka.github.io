@@ -20,28 +20,34 @@
             console.log(`changing gear(${value})....`)
         }
     }
-    MountainBike.prototype = new Bicycle();
-    
-    console.log('------Start constructor function examples------');
-    console.log('bicycle>>>>>>');
-    let cityCycle = new Bicycle();
-    cityCycle.speedUp(200);
-    console.log(`Speed: ${cityCycle.speed}`);
-    cityCycle.applyBrake(100);
-    console.log(`Speed: ${cityCycle.speed}`);
+    function start() {
+        const bike = new Bicycle()
+        MountainBike.prototype = bike;
+        let mountainBike = new MountainBike();       
+        console.log('------Start constructor function examples------');
+        console.log('bicycle>>>>>>');
 
-    console.log('mountainBike>>>>>>');
-    
-    let electricAssistedCycle = new MountainBike();
-    electricAssistedCycle.speedUp(400);
-    console.log(`Speed: ${electricAssistedCycle.speed}`);
-    console.log(`Gear: ${electricAssistedCycle.gear}`);
-    electricAssistedCycle.setGear(5);
-    console.log(`Gear: ${electricAssistedCycle.gear}`);
-    electricAssistedCycle.applyBrake(100);
-    console.log(`Speed: ${electricAssistedCycle.speed}`);
-    
-    console.log(`Gear: ${electricAssistedCycle.gear}`);
-    console.log('------End constructor function examples------');
+        bike.speedUp(200);
+        console.log(`Speed: ${bike.speed}`);
+        bike.applyBrake(100);
+        console.log(`Speed: ${bike.speed}`);
+
+        console.log('mountainBike>>>>>>');
+
+
+        mountainBike.speedUp(400);
+        console.log(`Speed: ${mountainBike.speed}`);
+        console.log(`Gear: ${mountainBike.gear}`);
+        mountainBike.setGear(5);
+        console.log(`Gear: ${mountainBike.gear}`);
+        mountainBike.applyBrake(100);
+        console.log(`Speed: ${mountainBike.speed}`);
+
+        console.log(`Gear: ${mountainBike.gear}`);
+        console.log('------End constructor function examples------');
+    }
+
+
+    window.addEventListener('load',start);
 
 })()
