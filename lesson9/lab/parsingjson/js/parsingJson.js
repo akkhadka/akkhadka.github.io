@@ -1,6 +1,6 @@
 (function () {
     "use strict";
-    const baseUrl = 'http://jsonplaceholder.typicode.com';
+    const baseUrl = 'https://jsonplaceholder.typicode.com';
     window.onload = function () {
         const btnGetPost = document.getElementById('btnGetPost');
         const userId = document.getElementById('userId');
