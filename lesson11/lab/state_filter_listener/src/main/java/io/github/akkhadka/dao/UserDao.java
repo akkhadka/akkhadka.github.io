@@ -13,8 +13,8 @@ public class UserDao {
         synchronized (UserDao.class){
             if(users==null){
                 users = new HashMap<>();
-                users.put("arjun",new User("arjun","password123","Arjun Khadka"));
-                users.put("xuan",new User("xuan","password123","Xuan Tuan"));
+                users.put("arjun",new User("arjun","123","Arjun Khadka"));
+                users.put("rakesh",new User("rakesh","123","Rakesh Shrestha"));
             }
         }
         }

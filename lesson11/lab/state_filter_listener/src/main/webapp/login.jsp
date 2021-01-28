@@ -133,12 +133,6 @@
             font-size: 1.2em;
         }
 
-        .center {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 200px;
-        }
 
         .loginContainer {
             background-color: #d0d0d0;
@@ -150,9 +144,7 @@
             margin: auto;
             width: 400px;
             height: 100%;
-            display: flex;
-            align-content: center;
-            align-items: center;
+            padding-top: 10%;
 
         }
         .error{
@@ -164,7 +156,8 @@
 <body>
 <%
     String error="";
-    if(request.getAttribute("error")!=null) error=(String) request.getAttribute("error");
+    if(request.getSession().getAttribute("error")!=null) error=(String) request.getSession().getAttribute("error");
+    Boolean remember =(Boolean) request.getAttribute("remember");
 %>
 <div class="mainContainer">
 
@@ -190,6 +183,16 @@
         <div class="col-12">
             <label for="userName">User Name:
                 <input id="password" name="password" type="password">
+            </label>
+        </div>
+    </div>
+    <div class="row">
+
+
+        <div class="col-12">
+            <label >
+                <input id="remember" name="remember" type="checkbox" <%=(remember!=null?"checked":"")%>>
+                remember me
             </label>
         </div>
     </div>

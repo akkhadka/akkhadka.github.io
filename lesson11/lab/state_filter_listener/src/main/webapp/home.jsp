@@ -10,24 +10,54 @@
 <head>
     <title>Home</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-size: 100%;
+            line-height: 1;
+            box-sizing: border-box;
+        }
         .topbar{
             height: 50px;
             background-color: #d0d0d0;
             color: white;
             position: relative;
+            padding: 15px 0;
+            text-align: center;
         }
         .logout{
-            background: white;
-            color: black;
+
             position: absolute;
-            right: 0;
+            right: 5px;
+
+
+        }
+        .center{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+        }
+        h1{
+            font-size: 2em;
         }
 
     </style>
 </head>
 <body>
 <div class="topbar">
-<a class="logout" href="/logout">Logout</a>
+    <form method="post" action="/logout">
+<%--        <a class="logout" href="/logout">Logout</a>--%>
+        <input class="logout" type="submit" value="logout">
+    </form>
+
+
+</div>
+
+<div class="center">
+    <%String name = (String) request.getAttribute("name");%>
+    <%String amount = (String) request.getAttribute("promo");%>
+    <h1>Welcome, <em> <%=name%> </em>.You have a promo of $<%=amount%></h1>
 </div>
 </body>
 </html>
