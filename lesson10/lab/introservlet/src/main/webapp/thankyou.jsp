@@ -9,7 +9,23 @@
 <html>
 <head>
     <title>Thank you</title>
-    <link href="support.css" rel="stylesheet" type="text/css">
+    <style>
+        .center{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+        }
+        .thankyou{
+            padding: 10px;
+            background-color: #d0d0d0;
+            margin: auto;
+            width: 70%;
+            border-radius: 12px;
+            font-size: 1.2em;
+        }
+
+    </style>
 </head>
 <body>
 

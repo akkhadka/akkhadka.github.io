@@ -9,7 +9,14 @@
 <html>
   <head>
     <title>Link for cstech support</title>
-      <link href="support.css" rel="stylesheet" type="text/css">
+    <style>
+        .center{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+        }
+    </style>
   </head>
   <body>
   <div class="center">
