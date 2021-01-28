@@ -157,7 +157,7 @@
 <%
     String error="";
     if(request.getSession().getAttribute("error")!=null) error=(String) request.getSession().getAttribute("error");
-    Boolean remember =(Boolean) request.getAttribute("remember");
+    String remember =request.getAttribute("remember")!=null?(String) request.getAttribute("remember"):null;
 %>
 <div class="mainContainer">
 
@@ -173,7 +173,7 @@
 
         <div class="col-12">
             <label for="userName">User Name:
-                <input id="username" name="username" type="text">
+                <input id="username" value='<%=(remember!=null? remember:"")%>' name="username" type="text">
             </label>
         </div>
     </div>

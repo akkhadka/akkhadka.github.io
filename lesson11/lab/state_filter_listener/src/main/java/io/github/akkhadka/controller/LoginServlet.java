@@ -17,7 +17,7 @@ public class LoginServlet extends HttpServlet {
 
         for(Cookie cookie: req.getCookies()){
             if(cookie.getName().equals("remember")){
-                req.setAttribute("remember",true);
+                req.setAttribute("remember",cookie.getValue());
             }
         }
         if(req.getSession().getAttribute("username")!=null)
