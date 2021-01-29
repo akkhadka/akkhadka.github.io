@@ -41,8 +41,7 @@
 
         section {
             margin-left: 20.50%;
-
-
+            margin-top: 15px;
         }
 
         footer {
@@ -133,6 +132,7 @@
 
         h1 {
             font-size: 2em;
+            margin: 8px 0;
         }
         .cart{
             text-align: right;
@@ -216,6 +216,9 @@
             clear: both;
             display: table;
         }
+        .text-right{
+            text-align: right !important;
+        }
     </style>
 </head>
 <body>
@@ -235,20 +238,6 @@
             </tr>
 
         <c:forEach var="item" items="${cart.lineItems}">
-<%--            <form method="post" action="/cart">--%>
-<%--                <div class="product">--%>
-<%--                    <div class="bg-faded">--%>
-<%--                        <input type="hidden" name="productId" value="${product.productId}"/>--%>
-<%--                        <h1 class="name"> ${product.name}</h1>--%>
-<%--                        <span class="price">$${product.price}</span>--%>
-<%--                    </div>--%>
-<%--                    <div>--%>
-<%--                        <span class="description">${product.description}</span>--%>
-<%--                        <input type="submit" value="Add to Cart">--%>
-<%--                    </div>--%>
-<%--                </div>--%>
-<%--            </form>--%>
-
                 <tr>
                     <td>${item.quantity}</td>
                     <td>${item.product.name}</td>
@@ -259,13 +248,20 @@
 
 
         </c:forEach>
+            <tr>
+                <td colspan="4" class="text-right">Total:</td>
+                <td >${cart.totalPrice}</td>
+            </tr>
         </table>
+
+    </section>
+    <section>
         <div class="row">
-            <div class="col-9">
+            <div class="col-6">
 
             </div>
 
-            <div class="col-3">
+            <div class="col-6">
                 <input class="normal" type="submit" value="Continue Shopping">
                 <input class="normal" type="submit" value="Checkout">
             </div>
