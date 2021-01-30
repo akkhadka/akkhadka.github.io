@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-public class CartServlet extends HttpServlet {
+public class CartController extends HttpServlet {
     private ProductService productService;
     private CartService cartService;
 
@@ -27,7 +27,7 @@ public class CartServlet extends HttpServlet {
         var productId = Integer.parseInt(req.getParameter("productId"));
         var product  = productService.getProducts().stream().filter(x->x.getProductId()==productId).findFirst().orElse(null);
         if(product!=null){
-            var cart = (Cart) req.getSession().getAttribute("cart");
+            var cart = (Cart) req.getSession(false).getAttribute("cart");
             if(cart==null){
                //var user = req.getSession().getAttribute("user");
                 cart = new Cart();

@@ -4,6 +4,7 @@ public class UserViewModel {
     private String username;
     private String name;
     private String password;
+    private boolean remember;
 
     private boolean isTemp;
     public UserViewModel(String password,String username, String name){
@@ -17,14 +18,6 @@ public class UserViewModel {
     }
     public String getUsername() {
         return username;
-    }
-
-    public boolean isTemp() {
-        return isTemp;
-    }
-
-    public void setTemp(boolean temp) {
-        isTemp = temp;
     }
 
 }

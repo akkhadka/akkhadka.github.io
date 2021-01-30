@@ -4,9 +4,11 @@ import io.github.akkhadka.webstore.model.Product;
 import io.github.akkhadka.webstore.model.ProductRepository;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
-public class FakeProductRepository implements ProductRepository {
+public class FakeProductRepository implements ProductRepository{
+
     private static List<Product> products;
 
     public FakeProductRepository() {
@@ -23,12 +25,28 @@ public class FakeProductRepository implements ProductRepository {
     }
 
     @Override
+    public void update(Product entity) {
+
+    }
+
+    @Override
+    public void save(Product entity) {
+
+    }
+
+    @Override
+    public void remove(Product entity) {
+
+    }
+
+    @Override
+    public Product find(Integer id) {
+        return products.stream().filter(x->x.getProductId()==id).findFirst().orElse(null);
+    }
+
+    @Override
     public List<Product> findAll() {
         return products;
     }
 
-    @Override
-    public Product find(int id) {
-        return products.stream().filter(x->x.getProductId()==id).findFirst().orElse(null);
-    }
 }

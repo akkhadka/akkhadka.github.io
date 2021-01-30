@@ -1,75 +1,66 @@
 <%--
   Created by IntelliJ IDEA.
   User: arjun
-  Date: 1/27/2021
-  Time: 3:14 PM
+  Date: 1/29/2021
+  Time: 4:26 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title>Login</title>
+    <title>Register</title>
     <link href="<c:url value='/resources/styles/webstore.css'/>" rel="stylesheet"/>
-
+    <script  src="/resources/js/signup.js" type="text/javascript"></script>
 </head>
 <body>
-<%
-    String error="";
-    if(request.getSession().getAttribute("error")!=null) error=(String) request.getSession().getAttribute("error");
-    String remember =request.getAttribute("remember")!=null?(String) request.getAttribute("remember"):null;
-%>
+<%@include file="/WEB-INF/views/layout/header.jsp" %>
+<%@include file="/WEB-INF/views/layout/nav.jsp" %>
+<section>
+
+
 <div class="mainContainer">
 
     <div class="loginContainer">
-        <form method="post">
-            <div class="row error">
+        <form method="post" action="/register" id="frmSignup">
 
-                <%=error%>
-
-            </div>
             <div class="row">
-
-
                 <div class="col-12">
                     <label for="userName">User Name:
-                        <input id="username" value='<%=(remember!=null? remember:"")%>' name="username" type="text">
+                        <input id="username"  name="username" type="text" required>
                     </label>
                 </div>
             </div>
             <div class="row">
-
-
                 <div class="col-12">
                     <label for="userName">Password:
-                        <input id="password" name="password" type="password">
+                        <input id="password" name="password" type="password" required>
                     </label>
                 </div>
             </div>
             <div class="row">
-
-
                 <div class="col-12">
-                    <label >
-                        <input id="remember" name="remember" type="checkbox" <%=(remember!=null?"checked":"")%>>
-                        remember me
+                    <label for="userName">Confirm Password:
+                        <input id="confirmPassword" name="confirmPassword" type="password" required>
                     </label>
                 </div>
             </div>
             <div class="row">
-
-
                 <div class="col-12">
-                    <input type="submit">
+                    <label for="name">Name:
+                        <input id="name" name="name" type="text">
+                    </label>
                 </div>
             </div>
             <div class="row">
                 <div class="col-12">
-                    <a href="/register">Sign up</a>
+                    <input type="submit" value="Sign up">
                 </div>
             </div>
+
         </form>
     </div>
 </div>
+</section>
 </body>
 </html>
